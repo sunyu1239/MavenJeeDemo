@@ -29,6 +29,18 @@
     </profile> 
   </profiles>
   <build>
-    <finalName>MavenDemo</finalName>
+    <finalName>MavenJeeDemo</finalName>
+    <plugins>  
+        <plugin>  
+            <groupId>org.codehaus.mojo</groupId>  
+            <artifactId>tomcat-maven-plugin</artifactId>  
+            <configuration>  
+                <warFile>target/MavenJeeDemo.war</warFile>  
+                <server>tomcat</server>  
+                <url>http://localhost:8080/MavenJeeDemo</url>  
+                <path>/MavenJeeDemo</path>  
+            </configuration>  
+        </plugin>  
+    </plugins>  
   </build>
 </project>
