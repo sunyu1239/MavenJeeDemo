@@ -37,7 +37,11 @@ public class AServlet implements Servlet {
     @Override
     public void service(ServletRequest arg0, ServletResponse arg1) throws ServletException, IOException {
         // TODO Auto-generated method stub
-        System.out.println("A request");
+        for (int i = 0; i < 10; i++) {
+            System.out.println(
+                    "A request:" + Thread.currentThread().getName() + ";" + Thread.currentThread().getId() + ";" + i);
+
+        }
     }
 
 }

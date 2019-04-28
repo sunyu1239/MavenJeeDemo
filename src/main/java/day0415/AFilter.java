@@ -1,6 +1,7 @@
 package day0415;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -23,6 +24,10 @@ public class AFilter implements Filter {
         // TODO Auto-generated method stub
         System.out.println("AFilter start");
         chain.doFilter(request, response);
+        PrintWriter p = response.getWriter();
+        p.append("<html><head></head><body>it's good</body></html>");
+        p.flush();
+        p.close();
         System.out.println("AFilter end");
     }
 
